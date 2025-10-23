@@ -9,8 +9,8 @@ class TTTBoard:
         board - a list of '*'s, 'X's & 'O's. 'X's represent moves by player 'X', 'O's
             represent moves by player 'O' and '*'s are spots no one has yet played on
     """
-
-    pass
+    def __init__(self, board):
+        self.board = board
 
 
 def play_tic_tac_toe() -> None:
@@ -31,7 +31,7 @@ def play_tic_tac_toe() -> None:
         except ValueError:
             return False
 
-    brd = TTTBoard()
+    brd = TTTBoard(["*","*","*","*","*","*","*","*","*"])
     players = ["X", "O"]
     turn = 0
 
