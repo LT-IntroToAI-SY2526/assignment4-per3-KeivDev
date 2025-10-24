@@ -18,6 +18,10 @@ class TTTBoard:
             self.board[pos] = player
             return True
         return False
+    
+
+    def has_won(self, player)
+        pass
 
 def play_tic_tac_toe() -> None:
     """Uses your class to play TicTacToe"""
