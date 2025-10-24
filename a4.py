@@ -13,6 +13,12 @@ class TTTBoard:
         self.board = board
 
 
+    def make_move(self, player, pos):
+        if self.board[pos] == "*"
+            self.board[pos] = player
+            return True
+        return False
+
 def play_tic_tac_toe() -> None:
     """Uses your class to play TicTacToe"""
 
