@@ -1,7 +1,5 @@
 # NOTE: Until you fill in the TTTBoard class mypy is going to give you multiple errors
 # talking about unimplemented class attributes, don't worry about this as you're working
-
-
 class TTTBoard:
     """A tic tac toe board
 
@@ -9,19 +7,37 @@ class TTTBoard:
         board - a list of '*'s, 'X's & 'O's. 'X's represent moves by player 'X', 'O's
             represent moves by player 'O' and '*'s are spots no one has yet played on
     """
-    def __init__(self, board):
+    def __init__(self, board = ["*","*","*","*","*","*","*","*","*"]):
         self.board = board
 
 
     def make_move(self, player, pos):
-        if self.board[pos] == "*"
+        if self.board[pos] == "*":
             self.board[pos] = player
             return True
         return False
-    
 
-    def has_won(self, player)
-        pass
+
+    def has_won(self, player):
+        win_configurations = ["012","345","678","036","147","258","048","246"]
+
+        # i: whether a win has been detected yet
+        # j: the win configuration currently being checked
+        # k: whether the win configuration seems so far to have been realized
+        # l: the index of the (char representing the index of the (position that is currently being evaluated))
+
+        i = False
+        for j in win_configurations:
+            k = True
+            for l in len(win_configurations[j]):
+                if self.board[win_configurations[j[l]]] != player:
+                    k = False
+            i = i or k
+        
+        return i
+
+    def game_over(self):
+        return self.has_won("X") or self.has_won("O") or '*' not in self.board
 
 def play_tic_tac_toe() -> None:
     """Uses your class to play TicTacToe"""
