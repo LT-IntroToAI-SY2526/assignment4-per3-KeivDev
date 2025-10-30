@@ -29,8 +29,15 @@ class TTTBoard:
         i = False
         for j in win_configurations:
             k = True
-            for l in len(win_configurations[j]):
-                if self.board[win_configurations[j[l]]] != player:
+
+
+            o = win_configurations
+            #n = j[l]
+            m = range(len(j))
+
+            for l in m:
+                n = int(j[l])
+                if self.board[n] != player:
                     k = False
             i = i or k
         
@@ -115,4 +122,4 @@ if __name__ == "__main__":
     print("All tests passed!")
 
     # uncomment to play!
-    # play_tic_tac_toe()
+    play_tic_tac_toe()
