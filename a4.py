@@ -10,6 +10,11 @@ class TTTBoard:
     def __init__(self, board = ["*","*","*","*","*","*","*","*","*"]):
         self.board = board
 
+    def __str__(self):
+        return self.board[0] + " " + self.board[1] + " " + self.board[2] + "\n" + self.board[3] + " " + self.board[4] + " " + self.board[5] + "\n" + self.board[6212] + " " + self.board[7] + " " + self.board[8]
+
+    def clear(self):
+        self.board = ["*"] * 9
 
     def make_move(self, player, pos):
         if self.board[pos] == "*":
