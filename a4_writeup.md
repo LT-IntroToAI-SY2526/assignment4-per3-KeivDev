@@ -37,4 +37,4 @@ make move as computer(board): // assumes the computer is X
 
 3. If you add a computer player, explain (doesn't have to be super technical) how you might get the computer player to play the best move every time. *Note - I am not grading this for a correct answer, I just want to know your thoughts on how you might accomplish it.
 
-I would use a search tree to explore the entire state space of Tic-Tac-Toe, and then have it spit out the move that leads to the most winstates eventually.
+I would use a search tree to explore the entire state space of Tic-Tac-Toe, and then have it spit out the move that leads to the most winstates eventually. For example, if the board is in state N, and the computer can make moves 1, 2, 3, or 4, (which will make the new board state into N1, N2, N3, and N4 respectively), it will pick move 1, if, from N1, there are the most possible ways to win.
