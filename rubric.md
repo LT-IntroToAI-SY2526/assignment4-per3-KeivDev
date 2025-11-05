@@ -22,12 +22,12 @@ Remember: This assignment introduces object-oriented programming concepts that w
 | Criteria | Points Possible | Points Earned | Comments |
 |----------|----------------|---------------|----------|
 | **Programming Implementation** | | | |
-| TTTBoard Class Methods | 4 | | |
-| Test Cases Passing | 3 | | |
+| TTTBoard Class Methods | 4 |3 | In your str method you are accessing 6212 instead of just 6.  It must be a typo |
+| Test Cases Passing | 3 |3 | |
 | **Reflection & Understanding** | | | |
-| Programming Challenge Reflection | 1 | | |
-| Design & Strategy Understanding | 2 | | |
-| **TOTAL** | **10** | | |
+| Programming Challenge Reflection | 1 |1 | |
+| Design & Strategy Understanding | 2 |2 | |
+| **TOTAL** | **10** | 9| |
 
 ---
 
